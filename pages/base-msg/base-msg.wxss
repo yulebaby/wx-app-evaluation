@@ -1,0 +1,27 @@
+page{margin:88rpx 0 0 ;}
+.input_box{width:639rpx;height:81rpx;background:#F5F5F5;padding-left:73rpx;margin:0 auto 32rpx;position:relative;box-sizing:border-box;}
+.input_phone_box{padding-left:200rpx;}
+.baby_name_icon,.baby_age_icon{width:36rpx;position:absolute;left:20rpx;top:23rpx;}
+.baby_name,.baby_age,.testcode{width:100%;height:81rpx;color:#666;font-size:28rpx;line-height:81rpx;}
+.baby_phone_icon{color:#666;font-size:28rpx;line-height:31rpx;padding-right:50rpx;position:absolute;left:55rpx;top:27rpx;border-right:1rpx solid #666}
+.send_testcode{width:210rpx;height:81rpx;color:#666;font-size:28rpx;border-left:10rpx solid #fff;position:absolute;right:0;top:0;text-align: center;z-index:999;line-height:80rpx;}
+.next_btn{width:642rpx;line-height:79rpx;color:#fff;font-size:36rpx;background:#7466D7;border-radius:40rpx;position:fixed;bottom:156rpx;margin-left:54rpx;}
+.error_prompt{color:#FD5576;font-size:24rpx;line-height:32rpx;}
+.error_prompt1{position:relative;left:-127rpx;}
+
+
+/*报名成功弹窗*/
+.enroll_menb{
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.5);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:999;
+}
+.success_menb{width:640rpx;height:240rpx;position:absolute;top:50%;left:50%;margin-top:-240rpx;margin-left:-320rpx;}
+.enroll_bg{width:100%;}
+.enroll_tit{color:#9E55FF;font-size:50rpx;position:absolute;top:180rpx;left:222rpx;}
+.enroll_cont{width:430rpx;color:#9E55FF;font-size:28rpx;position:absolute;top:270rpx;left:110rpx;}
+.enroll_btn{color:#fff;width:220rpx;height:80rpx;line-height:80rpx;background:linear-gradient(180deg,rgba(201,154,252,1),rgba(142,54,252,1));box-shadow:-1px 3px 10px 0px rgba(151,67,253,0.4);border-radius:40px;position:relative;bottom:180rpx;}

@@ -1,0 +1,42 @@
+<view>
+  <form id="babyMsg">
+    <view class="input_box">
+      <image src="../../assets/img/baby_name_icon.png" class="baby_name_icon" mode='widthFix'></image>
+      <input class="baby_name" placeholder='宝宝昵称' bindinput='nameInput' maxlength='10'></input>
+      <view class="error_prompt">{{nameError}}</view>
+    </view>
+    <view class="input_box">
+      <image src="../../assets/img/baby_age_icon.png" class="baby_age_icon" mode='widthFix'></image>
+      <!-- <input class="baby_age" placeholder='宝宝年龄' >{{ageError}}</input> -->
+      <view class="section">
+        <picker mode="date" value="{{date}}" start="2000-01-01" end="{{dateEnd}}" bindchange="bindDateChange">
+          <view class="baby_age">
+             {{date}}
+          </view>
+        </picker>
+      </view>
+      <view class="error_prompt">{{ageError}}</view>
+    </view>
+    <view class="input_box input_phone_box">
+      <view class="baby_phone_icon">+86</view>
+      <input class="baby_age" style='width: 220rpx' placeholder='手机号码' bindinput='phoneInput' maxlength='11'></input>
+      <button class="send_testcode" bindtap='getTestCode' disabled='{{sendTestCodeDisabled}}'>{{testCodeText}}</button>
+      <view class="error_prompt error_prompt1">{{phoneError}}</view>
+    </view>
+    <view class="input_box">
+      <input class="testcode" placeholder='请输入短信验证码' bindinput='testCodeInput' maxlength='4'></input>
+      <view class="error_prompt">{{testCodeError}}</view>
+    </view>
+    <button class="next_btn" bindtap='submitBabyMsg'>下一步</button>
+  </form>
+
+  <!-- 报名成功 -->
+  <view class="enroll_menb" wx:if="{{enroll_menb}}">
+    <view class="success_menb">
+      <image src="../../assets/img/enroll_bg.png" mode='widthFix' class="enroll_bg"></image>
+      <view class="enroll_tit">{{enroll_tit}}</view>
+      <view class="enroll_cont">{{enroll_cont}}</view>
+      <button class="enroll_btn" bindtap='close_enroll_menb'>确认</button>
+    </view>
+  </view>
+</view>

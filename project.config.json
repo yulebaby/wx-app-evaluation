@@ -1,0 +1,68 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.2",
+	"appid": "wxe82911cb7ee5ccbd",
+	"projectname": "assessment2.0",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "on-show",
+					"pathName": "pages/demo/demo",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "base",
+					"pathName": "pages/base-msg/base-msg",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "base",
+					"pathName": "pages/index/index",
+					"query": "shareUserPhone=18501349124"
+				},
+				{
+					"id": 3,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "origin=app&memberId=1708538&phone=18345181496"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,133 @@
+.clearfix::after{display: block;height: 0;clear: both;content: ''}
+page{background:#13264E;width:100%;height:100%;}
+scroll-view{width:100%;height:100%;}
+
+.header_section{width:100%;padding-bottom:10rpx;position:relative;}
+.header_bg{width:100%;}
+.logo_bg{width:125rpx;border-radius:6rpx;}
+.logo_bg>image{width:95rpx;padding:9rpx 15rpx;}
+.logo0{background:rgba(214,142,255,0.9);border:1px solid rgba(255,255,255,0.7);position:absolute; top:50%;left: 50%; margin-top:-168rpx; margin-right: -50rpx,}
+.logo1{background:rgba(255,255,255,0.9);border:1px solid rgba(107,82,40,0.7);position:absolute; top:50%;left:50%;margin-top:-25rpx; margin-left: 110rpx}
+.logo2{background:rgba(255,161,138,0.9);border:1px solid rgba(255,255,255,0.7);position:absolute; top:50%;left:50%;margin-top:159rpx;
+margin-left:107px;}
+.logo3{background:rgba(22,86,141,0.9);border:1px solid rgba(255,255,255,0.7);position:absolute; top:50%;left:50%;margin-top:180rpx;
+margin-left:-78rpx;}
+.logo4{background:rgba(255,199,30,0.9);border:1px solid rgba(49,166,222,0.7);position:absolute; top:50%;left:50%;margin-top:133rpx;
+margin-left:-295rpx;}
+.chest{width:93rpx;position:absolute;top:692rpx;left:436rpx;}
+/* 奖品列表 */
+.content_section{position:relative;}
+.content_section>image{width:100%;float:left;}
+.content_box{position:absolute;}
+.prize_list{text-align:center;}
+.prize_list_titImg{width:338rpx;margin:0 auto;padding-bottom:30rpx;}
+.prize_list_bg{width:710rpx;margin:0 20rpx;}
+.prize_list_bg_top{position:relative;top:12rpx;}
+.prize_detail{position:relative;}
+.prize_text{color:#fff;font-size:24rpx;padding:0 75rpx;
+background:url('https://ylbb-wxapp.oss-cn-beijing.aliyuncs.com/activity/assessment_prize_list_bg_middle.png') repeat-y; background-size:100% auto; margin:0 20rpx}
+.prize_text>view{padding-bottom:10rpx;text-align:left;}
+/* 品牌列表 */
+.brand_list{text-align:center;}
+.brand_list_titImg{width:409rpx;padding:120rpx 0 30rpx 0;}
+.brand_box{margin-bottom:20rpx;position:relative;}
+.brand_bg{width:100%;padding:0 20rpx;box-sizing:border-box;}
+.brand_msg{width:620rpx;color:#fff;font-size:24rpx;position:absolute;top:22rpx;left:66rpx;line-height:35rpx;text-align:center;}
+.brand_logo{width:90rpx;margin:0 auto;}
+.brand_msg>view{text-align:left;padding-bottom:10rpx;}
+/* 规则 */
+.rule_list{text-align:center;}
+.rule_titImg{width:338rpx;padding:120rpx 0 30rpx 0;}
+.rule_bg{width:100%;padding:0 15rpx;box-sizing:border-box;}
+.rule_box{position:relative;color:#fff;font-size:26rpx;text-align:left;line-height:40rpx;padding-bottom:200rpx;}
+.limit_time{position:absolute;top:110rpx;left:50rpx;padding-right:40rpx;}
+.limit_area{position:absolute;top:200rpx;left:50rpx;padding-right:40rpx;}
+.rule1{position:absolute;top:320rpx;left:50rpx;padding-right:40rpx;}
+.rule2{position:absolute;top:418rpx;left:50rpx;padding-right:40rpx;}
+.rule3{position:absolute;top:770rpx;left:50rpx;padding-right:40rpx;}
+
+
+
+/* 已参加 */
+/* 报名成功 */
+.enroll_success{text-align:center;}
+.enroll_success_titImg{width:420rpx;padding:120rpx 0 30rpx 0;}
+.enroll_success_box{position:relative;color:#fff;font-size:26rpx;text-align:left;line-height:45rpx;}
+.enroll_success_bg{width:100%;padding:0 15rpx;box-sizing:border-box;}
+.enroll_success_text{padding:0 62rpx;position:absolute;top:25rpx;}
+/* 奖品领取方式 */
+.prize_getWay{text-align:center;}
+.getWay_titImg{width:420rpx;padding:120rpx 0 30rpx 0;}
+.QR_box{text-align:center;}
+.QR_border{width:614rpx;height:26rpx;background:#6E72EF;border-radius:6rpx;margin-left:68rpx;}
+.QR{width:570rpx;background:#fff;margin-left:90rpx;}
+.QR>view{font-size:30rpx;position:relative;bottom:-10rpx;}
+.QR>image{width:530rpx;}
+.QR_text{margin-top:30rpx;position:relative;}
+.QR_text_bg{width:100%;padding:0 15rpx;box-sizing:border-box;}
+.QR_text>view{color:#fff;font-size:26rpx;text-align:left;padding:0 62rpx;line-height:45rpx;position:absolute;top:30rpx;}
+
+
+.footer{text-align:center;padding-left:90rpx;position:fixed;bottom:50rpx;z-index:998;}
+.share,.get{width:269rpx;}
+.share{margin-right:15rpx;}
+.memberBtn{text-align:center;margin:0 auto;position:fixed;bottom:50rpx;left:240rpx;}
+.share1{width:269rpx;margin:0 auto;}
+
+/*定位失败弹框*/
+.menb{
+  width:100%;
+  height: 100vh;
+  background:rgba(0,0,0,0.5);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:999;
+}
+.prompt{
+  width:580rpx;
+  background:#fff;
+  margin:0 auto;
+  border-radius:10rpx;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-290rpx;
+  margin-top:-150rpx;
+  text-align:center;
+}
+.prompt_tit{
+  padding:25rpx 0;
+  
+}
+.prompt_cont{
+  font-size:30rpx;
+  padding:10rpx 40rpx 30rpx;
+  text-align:left;
+
+}
+/*报名成功弹窗*/
+.enroll_menb{
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.5);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:999;
+}
+.success_menb{width:640rpx;height:240rpx;position:absolute;top:50%;left:50%;margin-top:-240rpx;margin-left:-320rpx;}
+.enroll_bg{width:100%;}
+.enroll_tit{color:#9E55FF;font-size:50rpx;position:absolute;top:180rpx;left:222rpx;}
+.enroll_cont{width:430rpx;color:#9E55FF;font-size:28rpx;position:absolute;top:270rpx;left:110rpx;}
+.enroll_btn{color:#fff;width:220rpx;height:80rpx;line-height:80rpx;background:linear-gradient(180deg,rgba(201,154,252,1),rgba(142,54,252,1));box-shadow:-1px 3px 10px 0px rgba(151,67,253,0.4);border-radius:40px;position:relative;bottom:180rpx;}
+
+/* page{
+  width: 100%;
+  height: 100%;
+}
+scroll-view{
+  height: 100%;
+  width: 100%;
+} */
+.scroll_top{width:78rpx;height:78rpx;padding:20rpx 10rpx 20rpx 20rpx;position:fixed;bottom:158rpx;right:0;}

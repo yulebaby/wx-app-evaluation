@@ -1,0 +1,157 @@
+  <scroll-view scroll-top="{{toView}}"  scroll-y="true"   scroll-with-animation="true" class="src">
+    <view id="scroll_top"></view>
+    <view class="header_section">
+      <image src="../../assets/img/header_img.jpg" class="header_bg" mode='widthFix'></image>
+      <view class="logo_bg logo{{index}}" wx:for="{{scroll_msg}}" wx:key="header_log"  catchtap='returnTop' data-id="{{item.distance}}">
+        <image src="{{item.logo }}" mode='widthFix'></image>
+      </view>
+      <!-- <view class="logo_bg logo{{index}}" wx:for="{{scroll_msg}}" wx:key="header_log2"   wx:if="{{orJoin}}">
+        <image src="{{item.logo }}" mode='widthFix'></image>
+      </view> -->
+      <!-- <view class="logo_bg logo2">
+        <image src="{{activeMsg.brandAddress.storeList[1].logo }}" mode='widthFix'></image>
+      </view>
+      <view class="logo_bg logo3">
+        <image src="{{activeMsg.brandAddress.storeList[2].logo }}" mode='widthFix'></image>
+      </view>
+      <view class="logo_bg logo4">
+        <image src="{{activeMsg.brandAddress.storeList[3].logo }}" mode='widthFix'></image>
+      </view>
+      <view class="logo_bg logo5">
+        <image src="{{activeMsg.brandAddress.storeList[4].logo }}" mode='widthFix'></image>
+      </view> -->
+      <image src='../../assets/img/chest.gif' mode='widthFix' class="chest" catchtap='returnTop' data-id="{{chest_scroll}}"></image>
+    </view>
+    <view class="content_section clearfix">
+      <image src="../../assets/img/bg1.jpg" mode='widthFix'></image>
+      <image src="../../assets/img/bg2.jpg" mode='widthFix'></image>
+      <view class="content_box">
+        <view class="prize_list" id="chest">
+          <image src="../../assets/img/prize_list.png" class="prize_list_titImg" mode='widthFix' ></image>
+          <view class="prize_detail">
+            <image src="../../assets/img/prize_list_bg_top.png" class="prize_list_bg prize_list_bg_top" mode='widthFix'></image>
+            <view class='prize_text'>
+              <view  wx:for="{{giftMsg}}" wx:key="gift">{{item}}</view>
+            </view>
+            <image src="../../assets/img/prize_list_bg_foot.png" class="prize_list_bg" mode='widthFix'></image>
+          </view>
+        </view>
+        <!-- 未参加 -->
+        <view class="noJoin">
+          <view class="brand_list">
+            <image src="../../assets/img/brand_list.png" class="brand_list_titImg" mode='widthFix'></image>
+            <view class="brand_box" wx:for="{{brandMsg}}" wx:key="brandMsg" id="list{{index}}">
+              <image src="../../assets/img/brand_bg.png" class='brand_bg' mode='widthFix'></image>
+              <view class="brand_msg">
+                <image src="{{item.logo}}" mode="widthFix" class="brand_logo"></image>
+                <view>门店名称：{{item.name}}</view> 
+                <view>门店地址：{{item.address}}</view> 
+                <view>品牌套餐：{{item.introduction}}</view> 
+              </view>
+            </view>
+          </view>
+          
+        </view>
+        <!-- 已参加 -->
+        <view class="enroll_success" wx:if="{{orJoin}}">
+          <image src="../../assets/img/enroll_success.png" class="enroll_success_titImg" mode='widthFix'></image>
+          <view class="enroll_success_box">
+            <image src="../../assets/img/enroll_success_bg.png" class="enroll_success_bg" mode='widthFix'></image>
+            <view class="enroll_success_text">家长您好，您已成功参与，请确保手机通畅，稍后门店客服会联系您预约时间。您也可以联系客服010-8640-9057.</view>
+          </view>
+          <!-- 识别二维码 -->
+          <view class="prize_getWay">
+            <image src="../../assets/img/prize_getWay.png" mode='widthFix' class="getWay_titImg"></image>
+            <view class="QR_box">
+              <view class="QR_border"></view>
+              <view class="QR">
+                <view>识别下方二维码添加客服微信</view>
+                <image src='../../assets/img/QR.jpg' mode='widthFix' bindtap='saveImg'></image>
+              </view>
+              <view class="QR_text">
+                <image src='../../assets/img/QR_bg.png' mode='widthFix' class="QR_text_bg"></image>
+                <view>
+                  <view>礼包领取方式：</view>
+                  <view>联系客服人员，提供参与活动预留的姓名及手机号码，并发送门店体验图片，客服审核后，即可成功解锁门票礼包，并由客服人员发放。（门票礼包形式为：实体票/电子票/兑换码，使用详情可咨询客服）.</view>
+                </view>
+                
+              </view>
+            </view>
+          </view>
+        </view>
+        
+
+        <!-- 活动规则 -->
+        <view class="rule_list">
+          <image src="../../assets/img/activity_rule.png" class="rule_titImg" mode='widthFix'></image>
+          <view class="rule_box">
+            <image src="../../assets/img/rule_bg.png" class="rule_bg" mode='widthFix'></image>
+            <view class="limit_time">{{activeMsg.activityPeriod}}</view>
+            <view class="limit_area">{{activeCity}}0-3岁宝宝家庭</view>
+            <view class="rule1">1.点击“我要得门票”填写信息并报名成功后，会出现客服微信二维码，请添加客服微信。</view>
+            <view class="rule2">
+              <view>2.根据活动详情时间至活动指定任意一家品牌机构打卡免费体验，并拍摄体验图片发给客服，即可解锁并领取第一级门票礼包。</view>
+              <view>至活动指定任意三家品牌机构打卡免费体验，并拍摄体验图片发给客服，即可解锁并领取第二级门票礼包。</view>
+              <view>至活动指定任意五家品牌机构打卡免费体验，并拍摄体验图片发给客服，即可解锁并领取第三级门票礼包。</view>
+            </view>
+            <view class="rule3">点击活动图片中分享按钮，转发至朋友圈或私信好友，好友成功报名参与则有随机红包金额等你获取。奖金可提现至微信钱包中。</view>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+
+
+    <!-- 定位失败弹窗 -->
+    <!-- wx:if="{{address_menb}}" -->
+    <view class="menb" wx:if="{{address_menb}}">
+      <view class="prompt">
+        <view class="prompt_tit">获取用户地址失败</view>
+        <view class="prompt_cont">请在设置页允许获取所在地址</view>
+        <!-- <button class='open_position'   open-type="openSetting" bindopensetting='handleSetting' >确定</button> -->
+         <button class='open_position'  open-type="openSetting" bindopensetting='openSetting' >确定</button>
+      </view>
+    </view>
+
+    <!-- 授权提示 -->
+    <view class="menb" wx:if="{{userMsg_menb}}">
+      <view class="prompt">
+      <view class="prompt_tit">提示</view>
+        <view class="prompt_cont">请允许稍后的相关授权，否则不能参与活动呦</view>
+        <button class='open_position'   open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">确定</button>
+      </view>
+    </view>
+
+    <!-- 保存相册提示 -->
+    <view class="menb" wx:if="{{photo_menb}}">
+      <view class="prompt">
+      <view class="prompt_tit">提示</view>
+        <view class="prompt_cont">请在设置页面打开保存相册授权，否则二维码将无法保存到本地</view>
+        <button class='open_position'  open-type="openSetting" bindopensetting='openPhoto' >确定</button>
+      </view>
+    </view>
+
+    <!-- 报名成功 -->
+    <view class="enroll_menb" wx:if="{{enroll_menb}}">
+      <view class="success_menb">
+        <image src="../../assets/img/enroll_bg.png" mode='widthFix' class="enroll_bg"></image>
+        <view class="enroll_tit">{{enroll_tit}}</view>
+        <view class="enroll_cont">{{enroll_cont}}</view>
+        <button class="enroll_btn" bindtap='close_enroll_menb'>确认</button>
+      </view>
+    </view>
+
+
+    
+  </scroll-view>
+  
+
+
+  <view class="footer" wx:if="{{!orJoin && orArea!=1 }}">
+    <image src="../../assets/img/shareBtn.png" class="share"  mode='widthFix' bindtap='shareMsg'></image>
+    <image src="../../assets/img/get.png" class="get"  mode='widthFix' bindtap='getTicket'></image>
+  </view>
+  <view class="memberBtn" wx:else>
+    <image src="../../assets/img/shareBtn.png" class="share1"  mode='widthFix' bindtap='shareMsg'></image>
+  </view>
+  <image src='../../assets/img/scroll_top.png' class="scroll_top" catchtap='returnTop' data-id="0"></image>
